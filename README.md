@@ -9,8 +9,8 @@ This repository contains solutions for the given tasks:
   capitalize_Python_Assignment.py
 
 
-  *##*  **2.**  *Accordion using HTML and CSS only*
-# FAQ Accordion Component
+  
+## 2. FAQ Accordion Component
 
 This repository contains a simple FAQ accordion built using only **HTML** and **CSS**.
 
@@ -19,7 +19,7 @@ This repository contains a simple FAQ accordion built using only **HTML** and **
 ## **Task Description**
 This project creates an FAQ component where users can interact with questions to show or hide their corresponding answers. It follows a pure HTML/CSS approach without JavaScript.
 
-### 2. Requirements:
+### . Requirements:
 - **Core Functionality**:
   - Clicking a question reveals its answer.
   - If another question is clicked, the previously revealed answer hides (accordion behavior).
