@@ -10,7 +10,7 @@ This repository contains solutions for the given tasks:
 
 
   
-## 2. FAQ Accordion Component
+##  2. FAQ Accordion Component
 
 This repository contains a simple FAQ accordion built using only **HTML** and **CSS**.
 
