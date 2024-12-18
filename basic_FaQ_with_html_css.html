@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive FAQ Accordion</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* FAQ Container */
+        .faq-container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: #fff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        /* FAQ Header */
+        .faq-header {
+            background-color: #6a0dad;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        /* FAQ Item */
+        .faq-item {
+            border-bottom: 1px solid #ddd;
+        }
+
+        .faq-question {
+            padding: 15px 20px;
+            cursor: pointer;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #333;
+            background-color: #f9f9f9;
+            transition: background-color 0.3s;
+        }
+
+        .faq-question:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Answer */
+        .faq-answer {
+            display: none;
+            padding: 10px 40px; /* Add indentation here */
+            background-color: #f9f9f9;
+            color: #555;
+        }
+        .icon {
+
+           font-size: 1.2rem; 
+        }
+
+        /* Show answer when active */
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* Toggle Plus/Minus */
+        .icon::before {
+            content: "+";
+            font-size: 1.5rem;
+            color: #6a0dad;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .icon::before {
+            content: "-";
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .faq-container {
+                margin: 10px;
+                width: 100%;
+            }
+
+            .faq-header {
+                font-size: 1.2rem;
+                padding: 15px;
+            }
+
+            .faq-question {
+                font-size: 0.9rem;
+                padding: 12px 15px;
+            }
+
+            .faq-answer {
+                padding: 10px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="faq-container">
+        <div class="faq-header">FAQs about Teach2Give</div>
+
+        <!-- FAQ Items -->
+        <div class="faq-item">
+            <div class="faq-question">
+                What is Teach2Give?
+                <span class="icon"></span>
+            </div>
+            <div class="faq-answer">
+                Teach2Give is a community that connects learners and educators whose mission is to equip individuals through education, to foster opportunities, and ignite positive community change, creating a future of growth and transformation.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                How do I get started with Teach2Give?
+                <span class="icon"></span>
+            </div>
+            <div class="faq-answer">
+                You can join Teach2Give by signing up on the website, selecting your role as a teacher or learner, and accessing the shared resources and knowledge.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                Is Teach2Give free to join?
+                <span class="icon"></span>
+            </div>
+            <div class="faq-answer">
+                Yes, Teach2Give is completely free for all users. The goal is to create a barrier-free platform for everyone to learn and share knowledge.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                Can I contribute if I’m not an expert?
+                <span class="icon"></span>
+            </div>
+            <div class="faq-answer">
+                Absolutely! Teach2Give values contributions from everyone, regardless of their expertise level. Even beginners can share their unique perspectives.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                How do I contact Teach2Give for support?
+                <span class="icon"></span>
+            </div>
+            <div class="faq-answer">
+                You can reach out via the "Contact Us" section on the Teach2Give website or send an email to our support team. We’re here to help!
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Select all FAQ items
+        const faqItems = document.querySelectorAll(".faq-item");
+
+        faqItems.forEach((item) => {
+            const question = item.querySelector(".faq-question");
+
+            question.addEventListener("click", () => {
+                // Close all other open FAQ items
+                faqItems.forEach((otherItem) => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove("active");
+                    }
+                });
+
+                // Toggle the current FAQ item
+                item.classList.toggle("active");
+            });
+        });
+    </script>
+</body>
+</html>
