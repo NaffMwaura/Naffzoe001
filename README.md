@@ -14,7 +14,7 @@ This repository contains solutions for the given tasks:
 
 This repository contains a simple FAQ accordion built using only **HTML** and **CSS**.
 
-N/B _I have submitted one file with both html and css because I would like to see the file easily run on a mobile app_
+*** _I have submitted one file with both html and css because I would like to see the file easily run on the phone as one file_
 ---
 
 ## **Task Description**
